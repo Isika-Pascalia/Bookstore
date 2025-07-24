@@ -271,4 +271,9 @@ textarea {
   }
 }
 
+.quantity-input {
+  width: 60px;
+  margin: 0 10px 10px 0;
+}
+
 

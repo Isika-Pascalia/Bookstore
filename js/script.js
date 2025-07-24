@@ -12,12 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const price = parseFloat(button.dataset.price);
 
       // Check if book is already in cart
-      const existing = cart.find(item => item.id === bookId);
-      if (existing) {
-        existing.quantity += 1;
-      } else {
-        cart.push({ id: bookId, title, price, quantity: 1 });
-      }
+      // Get quantity input value based on bookId
+const qtyInput = document.querySelector(`.quantity-input[data-id="${bookId}"]`);
+const quantity = parseInt(qtyInput?.value || 1);
+
+// Check if book already in cart
+const existing = cart.find(item => item.id === bookId);
+if (existing) {
+  existing.quantity += quantity;
+} else {
+  cart.push({ id: bookId, title, price, quantity });
+}
+
 
       // Save back to localStorage
       localStorage.setItem('cart', JSON.stringify(cart));
