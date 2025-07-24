@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book | My Bookstore</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+  <div class="navbar">
+    <div class="navbar-left">
+      <h1 class="page-title">Available Books</h1> 
+    </div>
+    <div class="navbar-right">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="books.html">Books</a>
+        <a href="cart.html">Cart</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+   <main>
+    <div class="book-list">
+     
+      <div class="book-card">
+        <img src="images/book1.jpg" alt="Book 1">
+        <h3>Walk into the Shadow</h3>
+        <p>Author: Paul Evans</p>
+        <p>Price: KES 500</p>
+        <button class="add-to-cart"
+                      data-id="1"
+                      data-title="Walk into the Shadow"
+                      data-price="500">Add to Cart</button>
+      </div>
+
+     
+      <div class="book-card">
+        <img src="images/book2.jpg" alt="Book 2">
+        <h3>Wise Steps for Sucess</h3>
+        <p>Author: Singh, Miss Sadhana</p>
+        <p>Price: KES 750</p>
+        <button class="add-to-cart"
+                       data-id="2"
+                       data-title="Wise Steps for Success"
+                       data-price="750">
+                    Add to Cart
+                      </button>
+      </div>
+
+   
+    </div>
+  </main>
+  <script src="js/script.js"></script>
+    
+</body>
+</html>
